@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@layer base {
+  html {
+    @apply transition-colors duration-300;
+  }
+
+  body {
+    @apply bg-[#0F0F0F] text-white;
+  }
+
+  html.light body {
+    @apply bg-[#F9F9F9] text-gray-900;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-white tracking-tight;
+  }
+
+  html.light .section-title {
+    @apply text-gray-900;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
