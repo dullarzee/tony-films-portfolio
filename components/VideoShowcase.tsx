@@ -6,7 +6,12 @@ import { Play } from "lucide-react";
 interface Video {
   id: number;
   title: string;
-  category: "Wedding" | "Commercial" | "Corporate" | "Film";
+  category:
+    | "Documentary"
+    | "Corporate Events"
+    | "Brand Content"
+    | "Video Podcast"
+    | "Live Production";
   thumbnail: string;
   videoUrl: string;
 }
@@ -14,131 +19,80 @@ interface Video {
 const videos: Video[] = [
   {
     id: 1,
-    title: "Sarah & James - Wedding Highlight",
-    category: "Wedding",
-    thumbnail:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=500&fit=crop",
+    title: "Birthday Highlight",
+    category: "Documentary",
+    thumbnail: "/birthday.png",
     videoUrl:
-      "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/birthday.mp4",
     //videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
   },
   {
     id: 2,
-    title: "Emma & David - Love Story",
-    category: "Wedding",
-    thumbnail:
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=500&fit=crop",
-    videoUrl: "https://placeholdervideo.dev/854x480",
+    title: "Multi-dimensional Workshop",
+    category: "Corporate Events",
+    thumbnail: "/multidimensionalWorkshop.png",
+    videoUrl:
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/multidimensionalWorkshop.mp4",
     //videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
   },
   {
     id: 3,
-    title: "TechVision - Brand Campaign",
-    category: "Commercial",
-    thumbnail:
-      "https://images.unsplash.com/photo-1516321318423-f06f70a504f9?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
+    title: "Olamide & Emmanuel Wedding",
+    category: "Documentary",
+    thumbnail: "ola&emma.png",
+    videoUrl:
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/wedding1.mp4",
   },
   {
     id: 4,
-    title: "Global Industries - Company Profile",
-    category: "Corporate",
-    thumbnail:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
+    title: "7th Bi-annual Interhouse Sport",
+    category: "Documentary",
+    thumbnail: "/interhouseSport.png",
+    videoUrl:
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/interhouseSport.mp4",
   },
   {
     id: 5,
-    title: "Urban Beats - Music Video",
-    category: "Film",
-    thumbnail:
-      "https://images.unsplash.com/photo-1505106407718-9f8b22dc1a0e?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
+    title: "Jeremiah's Wedding Highliht",
+    category: "Documentary",
+    thumbnail: "/jeremiahWedding.png",
+    videoUrl:
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/wedding2.mp4",
   },
   {
     id: 6,
-    title: "EventMasters - Corporate Event",
-    category: "Corporate",
-    thumbnail:
-      "https://images.unsplash.com/photo-1519167758481-dc4dc1474028?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
+    title: "Concert",
+    category: "Live Production",
+    thumbnail: "/concert.png",
+    videoUrl:
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/gospelConcert.mp4",
   },
   {
     id: 7,
-    title: "Sunrise Vows - Wedding Cinematic",
-    category: "Wedding",
-    thumbnail:
-      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
+    title: "Wedding Cinematic",
+    category: "Documentary",
+    thumbnail: "/wedding3.png",
+    videoUrl:
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/wedding3.mp4",
   },
   {
     id: 8,
-    title: "Innovation Labs - Commercial",
-    category: "Commercial",
-    thumbnail:
-      "https://images.unsplash.com/photo-1461749280684-ddeaa9ec6d11?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
-  },
-  {
-    id: 9,
-    title: "Dreams in Motion - Short Film",
-    category: "Film",
-    thumbnail:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
-  },
-  {
-    id: 10,
-    title: "Sunrise Productions - Corporate",
-    category: "Corporate",
-    thumbnail:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
-  },
-  {
-    id: 11,
-    title: "Alex & Lisa - Wedding Day",
-    category: "Wedding",
-    thumbnail:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
-  },
-  {
-    id: 12,
-    title: "Neon Nights - Creative Film",
-    category: "Film",
-    thumbnail:
-      "https://images.unsplash.com/photo-1500516297652-47a5eae1ff57?w=500&h=500&fit=crop",
-    // videoUrl:
-    //   "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    videoUrl: "/8a7bf4c4d7db4baf8b844648c29a8e89.mp4",
+    title: "Gravity Party",
+    category: "Documentary",
+    thumbnail: "/gravityParty.png",
+    videoUrl:
+      "https://qiiqmpeaohfneuboasrk.supabase.co/storage/v1/object/public/tonyPortfolio2/houseparty.mp4",
   },
 ];
 
 const categories = [
   "All",
-  "Wedding",
-  "Commercial",
-  "Corporate",
-  "Film",
+  "Documentaries",
+  "Commercials",
+  "Corporate Events",
+  "Brand Content",
+  "Video Podcast",
+  "Live Production",
 ] as const;
 
 export function VideoShowcase() {
@@ -161,7 +115,7 @@ export function VideoShowcase() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Section Title */}
         <div className="mb-16 text-center">
-          <h2 className="section-title mb-4 text-slate-200">Our Portfolio</h2>
+          <h2 className="section-title mb-4 text-slate-200">My Portfolio</h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             A curated selection of our finest cinematic works across multiple
             genres and styles.
@@ -231,7 +185,7 @@ export function VideoShowcase() {
           onClick={() => setSelectedVideo(null)}
         >
           <div
-            className="bg-[#0F0F0F] rounded-lg overflow-hidden lg:overflow-auto max-w-4xl w-full lg:w-[30%] max-h-[100vh] lg:max-h-[100vh] flex flex-col"
+            className="bg-[#0F0F0F] rounded-lg overflow-hidden lg:overflow-auto max-w-4xl w-full lg:w-[30%] max-h-screen flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Video Embed */}

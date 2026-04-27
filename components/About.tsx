@@ -4,10 +4,13 @@ import { Award, Heart, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function About() {
+  const countStartYear = new Date(1776872711704).getFullYear();
+  const currentYear = new Date().getFullYear();
+  const elapsedYears = currentYear - countStartYear + 6; //
   const stats = [
-    { label: "Projects Completed", value: "200+" },
-    { label: "Years Experience", value: "8" },
-    { label: "Happy Clients", value: "500+" },
+    { label: "Projects Completed", value: "120+" },
+    { label: "Years Experience", value: elapsedYears },
+    { label: "Happy Clients", value: "50+" },
   ];
 
   const services = [
@@ -63,11 +66,11 @@ export function About() {
               className="relative rounded-lg overflow-hidden"
             >
               <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&h=500&fit=crop"
+                src="/eyoAnthony.jpg"
                 alt="Videographer"
                 className="w-full h-full object-cover aspect-square rounded-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F]/50 to-transparent rounded-lg"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-[#0F0F0F]/50 to-transparent rounded-lg"></div>
             </motion.div>
           </div>
 
@@ -85,10 +88,11 @@ export function About() {
                   <span className="gradient-text">Flawless Execution.</span>
                 </h3>
                 <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 text-lg leading-relaxed mb-4">
-                  With over 8 years of experience in cinematic videography, I've
-                  had the privilege of capturing life&apos;s most important
-                  moments and transforming brands through compelling visual
-                  stories.
+                  FilmbyTony focuses on delivering unique and impactful visual
+                  work by blending creative innovation with a deep commitment to
+                  storytelling. The team works to capture the essence of a
+                  client's vision through a cinematic lens, ensuring every frame
+                  resonates with purposes.
                 </p>
                 <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 text-lg leading-relaxed">
                   My approach combines technical expertise with artistic vision,

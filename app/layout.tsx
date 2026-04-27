@@ -29,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geist.className} ${geistMono.variable} ${eagleLake.variable} font-sans antialiased bg-[#0F0F0F] text-white transition-colors duration-300`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <div className="pt-16">
+          <ThemeProvider>{children}</ThemeProvider>
+        </div>
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

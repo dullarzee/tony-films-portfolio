@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Logo from "./ui/logo";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -11,7 +12,10 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0F0F0F] via-[#1A1A1A] to-[#0F0F0F] relative overflow-hidden"
+      className="min-h-screen flex items-center bg-black/60 bg-no-repeat bg-cover bg-blend-multiply justify-center bg-linear-to-b from-[#0F0F0F] via-[#1A1A1A] to-[#0F0F0F] relative overflow-hidden"
+      style={{
+        backgroundImage: `url(/bgImageEyoAnthony.jpg)`,
+      }}
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -20,10 +24,18 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center py-20">
+      <div className="relative z-10 md:min-w-190  max-w-4xl mx-auto px-4 md:px-8 text-center py-20">
         <div className="space-y-6 animate-fade-in-up">
+          <div className="w-full h-[60vh] flex items-center justify-center">
+            <div className="hidden md:block">
+              <Logo xl />
+            </div>
+            <div className="md:hidden">
+              <Logo />
+            </div>
+          </div>
           {/* Subtitle */}
-          <div className="overflow-hidden">
+          {/*<div className="overflow-hidden">
             <motion.div
               initial={{ y: 200 }}
               animate={{ y: 0 }}
@@ -36,7 +48,6 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Main Title */}
           <div className="overflow-hidden">
             <motion.h1
               initial={{ y: 200 }}
@@ -50,7 +61,6 @@ export function Hero() {
             </motion.h1>
           </div>
 
-          {/* Description */}
           <div className="overflow-hidden">
             <motion.p
               initial={{ y: 200 }}
@@ -61,8 +71,7 @@ export function Hero() {
               High-quality visuals, compelling storytelling and attention to
               details. Let's bring your vision to life!
             </motion.p>
-          </div>
-
+          </div>*/}
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <button

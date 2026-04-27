@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { eagleLake } from "@/lib/fonts";
+import Logo from "./ui/logo";
 //import { eagleLake } from "@/app/layout";
 
 export function Navigation() {
@@ -30,7 +31,7 @@ export function Navigation() {
             onClick={() => scrollToSection("hero")}
             className={`text-xl md:text-2xl font-geist-mono font-bold text-white hover:text-yellow-400 transition-colors ${eagleLake.className}`}
           >
-            Tony-Films
+            <Logo />
           </button>
         </div>
 

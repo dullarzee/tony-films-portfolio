@@ -2,6 +2,7 @@
 
 import { eagleLake } from "@/lib/fonts";
 import { Heart } from "lucide-react";
+import Logo from "./ui/logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,11 +13,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3
-              className={`text-xl font-bold text-white dark:text-white light:text-gray-900 mb-2 ${eagleLake.className}`}
-            >
-              Tony Films
-            </h3>
+            <Logo />
             <p className="text-sm text-gray-400 dark:text-gray-400 light:text-gray-600">
               Cinematic storytelling through exceptional videography.
             </p>
